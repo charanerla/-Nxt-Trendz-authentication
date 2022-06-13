@@ -1,0 +1,85 @@
+/* Write your CSS code here */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Roboto';
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.home-sub-container {
+  width: 90vw;
+}
+.home-description-container {
+  flex-grow: 1;
+  margin-top: 25px;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.heading {
+  color: #1e293b;
+  font-weight: bold;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.large-img {
+  display: none;
+}
+.small-img {
+  width: 70vw;
+}
+
+@media all and (min-width: 768px) {
+  .home-description-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .description-container {
+    align-items: flex-start;
+    width: 45%;
+  }
+  .heading {
+    text-align: left;
+  }
+  .small-img {
+    display: none;
+  }
+  .large-img {
+    display: block;
+    width: 30vw;
+  }
+}
+.description {
+  color: #475569;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.shop-now-button {
+  background-color: #0967d2;
+  color: #ffffff;
+  width: 40vw;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+@media all and (min-width: 768px) {
+  .description {
+    text-align: left;
+  }
+  .shop-now-button {
+    width: 20vw;
+  }
+}

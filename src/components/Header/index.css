@@ -1,0 +1,94 @@
+/* Write your CSS code here */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Roboto';
+}
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.website-logo-logoutBtn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.website-logo {
+  width: 130px;
+}
+.logout-logo {
+  width: 35px;
+}
+
+.nav-items {
+  width: 100%;
+  list-style-type: none;
+  padding: 0px;
+  background-color: #e6f6ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+.nav-item {
+  width: 35px;
+  cursor: pointer;
+}
+.large-nav-bar-container {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+  .website-logo-logoutBtn-container {
+    display: none;
+  }
+  .nav-items {
+    display: none;
+  }
+  .large-nav-bar-container {
+    display: block;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.large-nav-items {
+  width: 40vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+@media all and (min-width: 992px) {
+  .large-nav-items {
+    width: 30vw;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logout-btn {
+  background-color: #0967d2;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+}
