@@ -55,27 +55,16 @@ const Header = () => (
         alt="website logo"
       />
       <ul className="nav-items large-nav-items">
+        <li className="text-nav-item">Home</li>
+
+        <li className="text-nav-item">Products</li>
+
+        <li className="text-nav-item">Cart</li>
+
         <li className="text-nav-item">
-          <Link to="/" className="nav-link">
-            Home
-          </Link>
-        </li>
-        <li className="text-nav-item">
-          <Link to="/products" className="nav-link">
-            Products
-          </Link>
-        </li>
-        <li className="text-nav-item">
-          <Link to="/cart" className="nav-link">
-            Cart
-          </Link>
-        </li>
-        <li className="text-nav-item">
-          <Link to="/login" className="nav-link">
-            <button type="button" className="logout-btn">
-              Logout
-            </button>
-          </Link>
+          <button type="button" className="logout-btn">
+            Logout
+          </button>
         </li>
       </ul>
     </div>

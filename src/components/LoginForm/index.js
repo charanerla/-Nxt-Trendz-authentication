@@ -4,12 +4,12 @@ import {Component} from 'react'
 import './index.css'
 
 class LoginForm extends Component {
-  state = {userName: '', password: ''}
+  state = {userName: '', password: '', isErrorMsgShown: false, errorMsg: ''}
 
   onSubmitForm = async event => {
     event.preventDefault()
-    const {username, password} = this.state
-    const userDetails = {username, password}
+    const {userName, password} = this.state
+    const userDetails = {username: userName, password}
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -17,16 +17,21 @@ class LoginForm extends Component {
     }
     const response = await fetch(url, options)
     const data = await response.json()
-    console.log(data)
-    console.log(response)
+
     if (response.ok === true) {
       this.onSubmitSuccess()
+    } else {
+      this.onLoginFailure(data.error_msg)
     }
   }
 
   onSubmitSuccess = () => {
     const {history} = this.props
     history.replace('/')
+  }
+
+  onLoginFailure = errorMsg => {
+    this.setState({isErrorMsgShown: true, errorMsg})
   }
 
   userName = event => {
@@ -38,7 +43,7 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {userName, password} = this.state
+    const {userName, password, errorMsg, isErrorMsgShown} = this.state
     return (
       <div className="login-page">
         <div className="login-container">
@@ -81,6 +86,7 @@ class LoginForm extends Component {
             <button type="submit" className="submit-button">
               Login
             </button>
+            {isErrorMsgShown && <p className="error-msg">*{errorMsg}</p>}
           </form>
         </div>
       </div>

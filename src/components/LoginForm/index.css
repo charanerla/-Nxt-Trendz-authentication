@@ -97,3 +97,7 @@ input {
   height: 35px;
   font-size: 18px;
 }
+.error-msg {
+  color: #ff0b37;
+  font-size: 12px;
+}

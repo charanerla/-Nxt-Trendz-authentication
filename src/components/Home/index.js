@@ -15,7 +15,7 @@ class Home extends Component {
               <h1 className="heading">Clothes That Get You Noticed</h1>
               <img
                 src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
-                alt="cloths that get you noticed"
+                alt="clothes that get you noticed"
                 className="small-img image"
               />
               <p className="description">
